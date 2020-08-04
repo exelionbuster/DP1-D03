@@ -18,6 +18,8 @@
 	<acme:form-textbox code="administrator.overture.form.label.contact-email" path="contactEmail"/>
 	
 	<acme:form-submit test="${command == 'create'}" code="administrator.overture.form.button.create" action="/administrator/overture/create"/>
+	<acme:form-submit test="${command == 'show'}" code="administrator.overture.form.button.update" action="/administrator/overture/update"/>
+	<acme:form-submit test="${command == 'update'}" code="administrator.overture.form.button.update" action="/administrator/overture/update"/>
 	
 	<acme:form-return code="administrator.overture.form.button.return" />
 		
