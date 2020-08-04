@@ -24,10 +24,10 @@ import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorInquiryCreateService implements AbstractCreateService<Administrator, Inquiry> {
+public class AdministratorInquiryUpdateService implements AbstractUpdateService<Administrator, Inquiry> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -64,10 +64,14 @@ public class AdministratorInquiryCreateService implements AbstractCreateService<
 	}
 
 	@Override
-	public Inquiry instantiate(final Request<Inquiry> request) {
-		Inquiry result;
+	public Inquiry findOne(final Request<Inquiry> request) {
+		assert request != null;
 
-		result = new Inquiry();
+		Inquiry result;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneById(id);
 
 		return result;
 	}
@@ -110,7 +114,10 @@ public class AdministratorInquiryCreateService implements AbstractCreateService<
 	}
 
 	@Override
-	public void create(final Request<Inquiry> request, final Inquiry entity) {
+	public void update(final Request<Inquiry> request, final Inquiry entity) {
+		assert request != null;
+		assert entity != null;
+
 		Date creationDate;
 
 		creationDate = new Date(System.currentTimeMillis() - 1);

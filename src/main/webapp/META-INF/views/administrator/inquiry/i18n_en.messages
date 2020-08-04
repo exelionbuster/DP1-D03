@@ -21,3 +21,9 @@ administrator.inquiry.form.label.contact-email = Contact e-mail:
 
 administrator.inquiry.form.button.return = Return
 administrator.inquiry.form.button.create = Create
+administrator.inquiry.form.button.update = Update
+
+administrator.inquiry.deadline.before = The deadline date is before from now!
+administrator.inquiry.max-money.less = MinMoney can't be more than MaxMoney!
+administrator.inquiry.min-money.negative = MinMoney can't be negative
+administrator.inquiry.max-money.negative MaxMoney can't be negative
