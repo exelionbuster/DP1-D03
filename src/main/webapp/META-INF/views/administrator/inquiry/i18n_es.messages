@@ -22,6 +22,7 @@ administrator.inquiry.form.label.contact-email = E-mail de contacto:
 administrator.inquiry.form.button.return = Volver
 administrator.inquiry.form.button.create = Crear
 administrator.inquiry.form.button.update = Actualizar
+administrator.inquiry.form.button.delete = Eliminar
 
 administrator.inquiry.deadline.before = ¡La fecha final es anterior a la fecha actual!
 administrator.inquiry.max-money.less = ¡El dinero mínimo no puede ser mayor que el dinero máximo!
