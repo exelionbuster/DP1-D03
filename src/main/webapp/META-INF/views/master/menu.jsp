@@ -57,7 +57,9 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.notice.list-all" action="/administrator/notice/list"/>
 			<acme:menu-suboption code="master.menu.administrator.inquiry.create" action="/administrator/inquiry/create"/>
-			<acme:menu-suboption code="master.menu.administrator.inquiry.list-active" action="/administrator/inquiry/list-active"/>		
+			<acme:menu-suboption code="master.menu.administrator.inquiry.list-active" action="/administrator/inquiry/list-active"/>	
+			<acme:menu-suboption code="master.menu.administrator.overture.create" action="/administrator/overture/create"/>
+			<acme:menu-suboption code="master.menu.administrator.overture.list-active" action="/administrator/overture/list-active"/>		
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
