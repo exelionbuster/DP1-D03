@@ -42,6 +42,9 @@ public class AdministratorOvertureController extends AbstractController<Administ
 	@Autowired
 	private AdministratorOvertureUpdateService	updateService;
 
+	@Autowired
+	private AdministratorOvertureDeleteService	deleteService;
+
 
 	// Constructors -----------------------------------------------------------
 
@@ -51,6 +54,7 @@ public class AdministratorOvertureController extends AbstractController<Administ
 		super.addCustomCommand(CustomCommand.LIST_ACTIVE, BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }
