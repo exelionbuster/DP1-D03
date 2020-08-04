@@ -65,6 +65,8 @@ master.menu.administrator.configuration 	= Configuración
 master.menu.administrator.shutdown 			= Parar el sistema
 master.menu.administrator.inquiry.create	= Crear consulta
 master.menu.administrator.inquiry.list-active	= Lista de consultas
+master.menu.administrator.overture.create	= Crear propuesta
+master.menu.administrator.overture.list-active		= Lista de propuestas
 
 # master.menu.provider ########################################################
 

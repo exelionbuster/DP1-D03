@@ -66,6 +66,8 @@ master.menu.administrator.configuration 	= Configuration
 master.menu.administrator.shutdown 			= Shut down
 master.menu.administrator.inquiry.create	= Create inquiry
 master.menu.administrator.inquiry.list-active		= Inquiry list
+master.menu.administrator.overture.create	= Create overture
+master.menu.administrator.overture.list-active		= Overture list
 
 # master.menu.provider ########################################################
 
