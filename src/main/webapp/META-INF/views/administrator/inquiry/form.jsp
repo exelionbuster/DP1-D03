@@ -18,6 +18,8 @@
 	<acme:form-textbox code="administrator.inquiry.form.label.contact-email" path="contactEmail"/>
 	
 	<acme:form-submit test="${command == 'create'}" code="administrator.inquiry.form.button.create" action="/administrator/inquiry/create"/>
+	<acme:form-submit test="${command == 'show'}" code="administrator.inquiry.form.button.update" action="/administrator/inquiry/update"/>	
+	<acme:form-submit test="${command == 'update'}" code="administrator.inquiry.form.button.update" action="/administrator/inquiry/update"/>
 	
 	<acme:form-return code="administrator.inquiry.form.button.return" />
 		
