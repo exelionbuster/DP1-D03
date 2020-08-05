@@ -68,6 +68,8 @@ master.menu.administrator.inquiry.create	= Create inquiry
 master.menu.administrator.inquiry.list-active		= Inquiry list
 master.menu.administrator.overture.create	= Create overture
 master.menu.administrator.overture.list-active		= Overture list
+master.menu.administrator.technology-record.list = Technologies
+master.menu.administrator.technology-record.create = Create Technology
 
 # master.menu.provider ########################################################
 
