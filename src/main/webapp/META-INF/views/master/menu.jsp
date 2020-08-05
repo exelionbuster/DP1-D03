@@ -19,80 +19,87 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-      		<acme:menu-suboption code="master.menu.anonymous.notice.list-active" action="/anonymous/notice/list-active"/>
-			<acme:menu-separator/>
-      		<acme:menu-suboption code="master.menu.anonymous.technology-record.list" action="/anonymous/technology-record/list"/>
-      		<acme:menu-suboption code="master.menu.anonymous.tool-record.list" action="/anonymous/tool-record/list"/>
-      		<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link.adri" action="https://github.com/adrferfer"/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link.alberto" action="https://github.com/Albert0led0"/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link.luca" action="https://github.com/exelionbuster"/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link.manuel" action="https://github.com/ManuelAles"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.bulletin.ales.create" action="/anonymous/ales-bulletin/create"/>
-      		<acme:menu-suboption code="master.menu.anonymous.bulletin.ales.list" action="/anonymous/ales-bulletin/list"/>
-    		<acme:menu-separator/>
-    		<acme:menu-suboption code="master.menu.anonymous.bulletin.bonacini.create" action="/anonymous/bonacini-bulletin/create"/>
-			<acme:menu-suboption code="master.menu.anonymous.bulletin.bonacini.list" action="/anonymous/bonacini-bulletin/list"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.anonymous.bulletin.fernandez.create" action="/anonymous/fernandez-bulletin/create"/>
-			<acme:menu-suboption code="master.menu.anonymous.bulletin.fernandez.list" action="/anonymous/fernandez-bulletin/list"/>
-	      	<acme:menu-separator/>
-	      	<acme:menu-suboption code="master.menu.anonymous.bulletin.toledo.create" action="/anonymous/toledo-bulletin/create"/>
-      		<acme:menu-suboption code="master.menu.anonymous.bulletin.toledo.list" action="/anonymous/toledo-bulletin/list"/>      		
+			<acme:menu-suboption code="master.menu.anonymous.notice.list-active" action="/anonymous/notice/list-active" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.anonymous.technology-record.list" action="/anonymous/technology-record/list" />
+			<acme:menu-suboption code="master.menu.anonymous.tool-record.list" action="/anonymous/tool-record/list" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.adri" action="https://github.com/adrferfer" />
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.alberto" action="https://github.com/Albert0led0" />
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.luca" action="https://github.com/exelionbuster" />
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link.manuel" action="https://github.com/ManuelAles" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.ales.create" action="/anonymous/ales-bulletin/create" />
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.ales.list" action="/anonymous/ales-bulletin/list" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.bonacini.create" action="/anonymous/bonacini-bulletin/create" />
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.bonacini.list" action="/anonymous/bonacini-bulletin/list" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.fernandez.create" action="/anonymous/fernandez-bulletin/create" />
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.fernandez.list" action="/anonymous/fernandez-bulletin/list" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.toledo.create" action="/anonymous/toledo-bulletin/create" />
+			<acme:menu-suboption code="master.menu.anonymous.bulletin.toledo.list" action="/anonymous/toledo-bulletin/list" />
 		</acme:menu-option>
-		
+
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.notice.list-active" action="/authenticated/notice/list-active"/>
-			<acme:menu-suboption code="master.menu.authenticated.inquiry.list-active" action="/authenticated/inquiry/list-active"/>
-			<acme:menu-suboption code="master.menu.authenticated.overture.list-active" action="/authenticated/overture/list-active"/>	
-			<acme:menu-suboption code="master.menu.authenticated.challenge.list-active" action="/authenticated/challenge/list-active"/>
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.authenticated.tool-record.list" action="/authenticated/tool-record/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.technology-record.list" action="/authenticated/technology-record/list"/>
-			
-												
+			<acme:menu-suboption code="master.menu.authenticated.notice.list-active" action="/authenticated/notice/list-active" />
+			<acme:menu-suboption code="master.menu.authenticated.inquiry.list-active" action="/authenticated/inquiry/list-active" />
+			<acme:menu-suboption code="master.menu.authenticated.overture.list-active" action="/authenticated/overture/list-active" />
+			<acme:menu-suboption code="master.menu.authenticated.challenge.list-active" action="/authenticated/challenge/list-active" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.authenticated.tool-record.list" action="/authenticated/tool-record/list" />
+			<acme:menu-suboption code="master.menu.authenticated.technology-record.list" action="/authenticated/technology-record/list" />
+
+
 		</acme:menu-option>
-		
+
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
-			<acme:menu-suboption code="master.menu.administrator.notice.list-all" action="/administrator/notice/list"/>
-			<acme:menu-suboption code="master.menu.administrator.inquiry.create" action="/administrator/inquiry/create"/>
-			<acme:menu-suboption code="master.menu.administrator.inquiry.list-active" action="/administrator/inquiry/list-active"/>	
-			<acme:menu-suboption code="master.menu.administrator.overture.create" action="/administrator/overture/create"/>
-			<acme:menu-suboption code="master.menu.administrator.overture.list-active" action="/administrator/overture/list-active"/>		
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
-			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
-			<acme:menu-suboption code="master.menu.administrator.configuration" action="/administrator/configuration/show"/>
-			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.notice.list-all" action="/administrator/notice/list" />
+			<acme:menu-suboption code="master.menu.administrator.inquiry.create" action="/administrator/inquiry/create" />
+			<acme:menu-suboption code="master.menu.administrator.inquiry.list-active" action="/administrator/inquiry/list-active" />
+			<acme:menu-suboption code="master.menu.administrator.overture.create" action="/administrator/overture/create" />
+			<acme:menu-suboption code="master.menu.administrator.overture.list-active" action="/administrator/overture/list-active" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show" />
+			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list" />
+			<acme:menu-suboption code="master.menu.administrator.configuration" action="/administrator/configuration/show" />
+			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.technology-record.list" action="/administrator/technology-record/list" />
 			<acme:menu-suboption code="master.menu.administrator.technology-record.create" action="/administrator/technology-record/create" />
-			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.tool-record.list" action="/administrator/tool-record/list" />
+			<acme:menu-suboption code="master.menu.administrator.tool-record.create" action="/administrator/tool-record/create" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
 		</acme:menu-option>
 	</acme:menu-left>
 
 	<acme:menu-right>
-		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>
-		<acme:menu-option code="master.menu.sign-in" action="/master/sign-in" access="isAnonymous()"/>
+		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()" />
+		<acme:menu-option code="master.menu.sign-in" action="/master/sign-in" access="isAnonymous()" />
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
-			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
-			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update" />
+			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create"
+				access="!hasRole('Provider')" />
+			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update"
+				access="hasRole('Provider')" />
+			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create"
+				access="!hasRole('Consumer')" />
+			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update"
+				access="hasRole('Consumer')" />
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
+		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()" />
 	</acme:menu-right>
 </acme:menu-bar>
 
