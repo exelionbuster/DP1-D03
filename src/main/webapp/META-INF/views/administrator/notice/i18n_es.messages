@@ -19,4 +19,11 @@ anonymous.notice.form.label.deadline = Fecha límite:
 administrator.notice.form.label.body = Cuerpo:
 administrator.notice.form.label.links = Enlaces:
 
+administrator.notice.form.error.past-deadline = La fecha de creación debe ser futura
+administrator.notice.form.error.must-accept = Ya que las noticias no pueden ser modificadas, se ha de aceptar su creación
+
+administrator.notice.form.placeholder.deadline = DD/MM/AAAA HH:mm
+
+administrator.notice.form.button.checkbox = Acepto (Las noticias no se pueden ni eliminar ni modificar, revise su noticia)
 administrator.notice.form.button.return = Volver
+administrator.notice.form.button.create = Crear
