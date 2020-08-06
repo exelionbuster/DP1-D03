@@ -57,20 +57,22 @@ master.menu.authenticated.technology-record.list 	= Tecnologías
 
 # master.menu.administrator ###################################################
 
-master.menu.administrator 					= Administrador
-master.menu.administrator.notice.list-all	= Todas las noticias
-master.menu.administrator.dashboard			= Panel de estadísticas
-master.menu.administrator.user-accounts 	= Cuentas de usuario
-master.menu.administrator.configuration 	= Configuración
-master.menu.administrator.shutdown 			= Parar el sistema
-master.menu.administrator.inquiry.create	= Crear consulta
-master.menu.administrator.inquiry.list-active	= Lista de consultas
-master.menu.administrator.overture.create	= Crear propuesta
+master.menu.administrator 							= Administrador
+master.menu.administrator.notice.list-all			= Todas las noticias
+master.menu.administrator.inquiry.create			= Crear consulta
+master.menu.administrator.inquiry.list-active		= Lista de consultas
+master.menu.administrator.overture.create			= Crear propuesta
 master.menu.administrator.overture.list-active		= Lista de propuestas
-master.menu.administrator.technology-record.list = Tecnologías
-master.menu.administrator.technology-record.create = Crear tecnología
-master.menu.administrator.tool-record.list = Herramientas
-master.menu.administrator.tool-record.create = Crear herramienta
+master.menu.administrator.technology-record.list 	= Tecnologías
+master.menu.administrator.technology-record.create 	= Crear tecnología
+master.menu.administrator.tool-record.list 			= Herramientas
+master.menu.administrator.tool-record.create 		= Crear herramienta
+master.menu.administrator.challenge.create			= Nuevo desafío
+master.menu.administrator.dashboard					= Panel de estadísticas
+master.menu.administrator.user-accounts 			= Cuentas de usuario
+master.menu.administrator.configuration 			= Configuración
+master.menu.administrator.shutdown 					= Parar el sistema
+
 
 # master.menu.provider ########################################################
 

@@ -15,6 +15,7 @@
 	<acme:form-url code="authenticated.challenge.form.label.expert-goal" path="expertGoal"/>
 	<acme:form-url code="authenticated.challenge.form.label.expert-reward" path="expertReward"/>
 	
+	<acme:form-submit test="${hasRole('Administrator')}" code="acme" action="/administrator/challenge/update"/>
 	<acme:form-return code="authenticated.challenge.form.button.return" />
 		
 </acme:form>

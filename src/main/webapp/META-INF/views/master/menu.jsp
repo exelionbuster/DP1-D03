@@ -60,6 +60,7 @@
 			<acme:menu-suboption code="master.menu.administrator.inquiry.list-active" action="/administrator/inquiry/list-active" />
 			<acme:menu-suboption code="master.menu.administrator.overture.create" action="/administrator/overture/create" />
 			<acme:menu-suboption code="master.menu.administrator.overture.list-active" action="/administrator/overture/list-active" />
+			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show" />
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list" />
