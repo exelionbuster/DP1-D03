@@ -47,7 +47,7 @@ public class AdministratorInquiryListService implements AbstractListService<Admi
 
 		Collection<Inquiry> result;
 
-		result = this.repository.findActiveInquiries();
+		result = this.repository.findManyAll();
 
 		return result;
 	}

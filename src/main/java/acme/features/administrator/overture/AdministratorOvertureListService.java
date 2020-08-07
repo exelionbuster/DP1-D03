@@ -47,7 +47,7 @@ public class AdministratorOvertureListService implements AbstractListService<Adm
 
 		Collection<Overture> result;
 
-		result = this.repository.findActiveOvertures();
+		result = this.repository.findManyAll();
 
 		return result;
 	}
