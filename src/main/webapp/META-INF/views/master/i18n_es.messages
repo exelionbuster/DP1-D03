@@ -30,6 +30,7 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous 							= Anónimo
 master.menu.anonymous.notice.list-active		= Noticias vigentes
+master.menu.administrator.notice.create 		= Nueva noticia
 master.menu.anonymous.technology-record.list    = Technologías
 master.menu.anonymous.tool-record.list   		= Herramientas
 master.menu.anonymous.favourite-link.adri		= Enlace de Adri
