@@ -9,8 +9,8 @@
 	<acme:form-textbox code="administrator.credit-card.form.label.number" path="number"/>
 	<acme:form-textbox code="administrator.credit-card.form.label.brand" path="brand"/>
 	<acme:form-moment code="administrator.credit-card.form.label.expirationDate" path="expirationDate"/>
-	<acme:form-textbox code="administrator.credit-card.form.label.target" path="cvv"/>
+	<acme:form-textbox code="administrator.credit-card.form.label.cvv" path="cvv"/>
 	
-	<acme:form-return code="administrator.credit-card.form.button.return" />
+	<acme:form-return code="administrator.credit-card.form.button.return" action="/administrator/banner/list"/>
 		
 </acme:form>

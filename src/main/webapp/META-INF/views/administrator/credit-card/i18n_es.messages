@@ -8,11 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.banner.list.slogan = Eslogan
-administrator.banner.list.target = Objetivo
-
-administrator.banner.form.label.picture = Imagen:
-administrator.banner.form.label.slogan = Eslogan:
-administrator.banner.form.label.target = Objetivo:
+administrator.credit-card.form.label.holder-name = Nombre del propietario:
+administrator.credit-card.form.label.number = Número:
+administrator.credit-card.form.label.brand = Marca:
+administrator.credit-card.form.label.expirationDate = Fecha de expiración:
+administrator.credit-card.form.label.cvv = CVV:
 	
-administrator.banner.form.button.return = Volver
+administrator.credit-card.form.button.return = Volver
