@@ -6,16 +6,17 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.banners.Banner;
 import acme.features.administrator.creditCard.AdministratorCreditCardRepository;
+import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorBannerShowService implements AbstractShowService<Administrator, Banner> {
+public class AdministratorBannerUpdateService implements AbstractUpdateService<Administrator, Banner> {
 
 	@Autowired
-	AdministratorBannerRepository		respository;
+	AdministratorBannerRepository		repository;
 
 	@Autowired
 	AdministratorCreditCardRepository	creditCardRepository;
@@ -25,6 +26,16 @@ public class AdministratorBannerShowService implements AbstractShowService<Admin
 	public boolean authorise(final Request<Banner> request) {
 		assert request != null;
 		return true;
+	}
+
+	@Override
+	public void bind(final Request<Banner> request, final Banner entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+		request.bind(entity, errors);
+
 	}
 
 	@Override
@@ -49,18 +60,40 @@ public class AdministratorBannerShowService implements AbstractShowService<Admin
 			model.setAttribute("creditCards", this.creditCardRepository.findMany());
 
 		}
+
 	}
 
 	@Override
 	public Banner findOne(final Request<Banner> request) {
 		assert request != null;
 
-		Banner res;
+		Banner result;
 		int id;
-		id = request.getModel().getInteger("id");
 
-		res = this.respository.findOneById(id);
-		return res;
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneById(id);
+
+		return result;
+	}
+
+	@Override
+	public void validate(final Request<Banner> request, final Banner entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+	}
+
+	@Override
+	public void update(final Request<Banner> request, final Banner entity) {
+		String creditCardId = (String) request.getModel().getAttribute("creditCardId");
+		if (creditCardId != "") {
+			Integer creditId = new Integer(creditCardId);
+			entity.setCreditCard(this.creditCardRepository.findOneById(creditId));
+		} else {
+			entity.setCreditCard(null);
+		}
+		this.repository.save(entity);
+
 	}
 
 }
