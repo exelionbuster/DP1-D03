@@ -59,13 +59,14 @@ master.menu.authenticated.technology-record.list 	= Technologies
 # master.menu.administrator ###################################################
 
 master.menu.administrator 							= Administrator
+master.menu.administrator.notice.create 	= New notice
 master.menu.administrator.notice.list-all 			= All notices
 master.menu.administrator.inquiry.create			= Create inquiry
-master.menu.administrator.notice.list-all 			= All notices
-master.menu.administrator.notice.create 			= New notice
 master.menu.administrator.inquiry.list-active		= Inquiry list
 master.menu.administrator.overture.create			= Create overture
 master.menu.administrator.overture.list-active		= Overture list
+master.menu.administrator.banner.create = New banner
+master.menu.administrator.banner.list = Banners
 master.menu.administrator.technology-record.list 	= Technologies
 master.menu.administrator.technology-record.create 	= Create technology
 master.menu.administrator.tool-record.list 			= Tools
@@ -76,7 +77,6 @@ master.menu.administrator.dashboard					= Dashboard
 master.menu.administrator.user-accounts 			= User accounts
 master.menu.administrator.configuration 			= Configuration
 master.menu.administrator.shutdown 					= Shut down
-
 
 # master.menu.provider ########################################################
 

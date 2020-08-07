@@ -60,10 +60,13 @@ master.menu.authenticated.technology-record.list 	= Tecnologías
 
 master.menu.administrator 							= Administrador
 master.menu.administrator.notice.list-all			= Todas las noticias
+master.menu.administrator.notice.create 	= Nueva noticia
 master.menu.administrator.inquiry.create			= Crear consulta
 master.menu.administrator.inquiry.list-active		= Lista de consultas
 master.menu.administrator.overture.create			= Crear propuesta
 master.menu.administrator.overture.list-active		= Lista de propuestas
+master.menu.administrator.banner.list = Banners
+master.menu.administrator.banner.create = Nuevo banner
 master.menu.administrator.technology-record.list 	= Tecnologías
 master.menu.administrator.technology-record.create 	= Crear tecnología
 master.menu.administrator.tool-record.list 			= Herramientas
@@ -74,7 +77,6 @@ master.menu.administrator.dashboard					= Panel de estadísticas
 master.menu.administrator.user-accounts 			= Cuentas de usuario
 master.menu.administrator.configuration 			= Configuración
 master.menu.administrator.shutdown 					= Parar el sistema
-
 
 # master.menu.provider ########################################################
 

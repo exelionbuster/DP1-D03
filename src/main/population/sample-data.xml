@@ -456,7 +456,7 @@
   
   <bean id="banner01" class="acme.entities.banners.Banner" >
   	<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg" />
-  	<property name="slogan" value="Esto es un slogan" />
+  	<property name="slogan" value="Esto es un agujero negro" />
   	<property name="target" value="https://es.wikipedia.org/" />
   	<property name="creditCard">
   		<ref bean="creditCard01"/>
@@ -465,7 +465,7 @@
   
   <bean id="banner02" class="acme.entities.banners.Banner" >
   	<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/d/d1/Artist%E2%80%99s_impression_of_the_quasar_3C_279.jpg" />
-  	<property name="slogan" value="Esto es un slogan" />
+  	<property name="slogan" value="Aquí vemos un quasar" />
   	<property name="target" value="https://es.wikipedia.org/" />
   	<property name="creditCard">
   		<ref bean="creditCard01"/>
@@ -474,14 +474,14 @@
   
   <bean id="banner03" class="acme.entities.banners.Banner" >
   	<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/f/f0/Vega_-_star_in_Lyra.png" />
-  	<property name="slogan" value="Esto es un slogan" />
+  	<property name="slogan" value="La estrella Vega" />
   	<property name="target" value="https://es.wikipedia.org/" />
   	<property name="creditCard"><null/></property>
   </bean>
   
   <bean id="banner04" class="acme.entities.banners.Banner" >
   	<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/f/f0/Vega_-_star_in_Lyra.png" />
-  	<property name="slogan" value="Esto es un slogan" />
+  	<property name="slogan" value="La estrella Vega de nuevo" />
   	<property name="target" value="https://es.wikipedia.org/" />
   	<property name="creditCard">
   		<ref bean="creditCard02"/>
