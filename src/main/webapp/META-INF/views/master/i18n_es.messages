@@ -72,6 +72,7 @@ master.menu.administrator.technology-record.create 	= Crear tecnología
 master.menu.administrator.tool-record.list 			= Herramientas
 master.menu.administrator.tool-record.create 		= Crear herramienta
 master.menu.administrator.challenge.create			= Nuevo desafío
+master.menu.administrator.challenge.list-all		= Desafíos
 master.menu.administrator.dashboard					= Panel de estadísticas
 master.menu.administrator.user-accounts 			= Cuentas de usuario
 master.menu.administrator.configuration 			= Configuración

@@ -22,4 +22,9 @@
 		<put-attribute name="body" type="template" value="../administrator/challenge/form.jsp" />
 	</definition>
 	
+	<definition name="administrator/challenge/list" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/challenge/list.jsp" />
+	</definition>
+	
+	
 </tiles-definitions>

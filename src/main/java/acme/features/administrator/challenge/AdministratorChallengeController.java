@@ -17,11 +17,23 @@ import acme.framework.entities.Administrator;
 public class AdministratorChallengeController extends AbstractController<Administrator, Challenge> {
 
 	@Autowired
-	private AdministratorChallengeCreateService createService;
+	private AdministratorChallengeShowService	showService;
+
+	@Autowired
+	private AdministratorChallengeListService	listService;
+
+	@Autowired
+	private AdministratorChallengeCreateService	createService;
+
+	@Autowired
+	private AdministratorChallengeUpdateService	updateService;
 
 
 	@PostConstruct
 	private void initialise() {
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 }
