@@ -61,9 +61,9 @@
 			<acme:menu-suboption code="master.menu.administrator.notice.list-all" action="/administrator/notice/list" />
 			<acme:menu-suboption code="master.menu.administrator.notice.create" action="/administrator/notice/create" />
 			<acme:menu-suboption code="master.menu.administrator.inquiry.create" action="/administrator/inquiry/create" />
-			<acme:menu-suboption code="master.menu.administrator.inquiry.list-active" action="/administrator/inquiry/list-active" />
+			<acme:menu-suboption code="master.menu.administrator.inquiry.list-all" action="/administrator/inquiry/list" />
 			<acme:menu-suboption code="master.menu.administrator.overture.create" action="/administrator/overture/create" />
-			<acme:menu-suboption code="master.menu.administrator.overture.list-active" action="/administrator/overture/list-active" />
+			<acme:menu-suboption code="master.menu.administrator.overture.list-all" action="/administrator/overture/list" />
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create" />
 			<acme:menu-suboption code="master.menu.administrator.challenge.list-all" action="/administrator/challenge/list" />
 			<acme:menu-separator />

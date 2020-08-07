@@ -23,8 +23,8 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratorInquiryRepository extends AbstractRepository {
 
-	@Query("select i from Inquiry i where i.deadline > current_timestamp")
-	Collection<Inquiry> findActiveInquiries();
+	@Query("select i from Inquiry i")
+	Collection<Inquiry> findManyAll();
 
 	@Query("select a from Inquiry a where a.id = ?1")
 	Inquiry findOneById(int id);
