@@ -72,6 +72,7 @@ master.menu.administrator.technology-record.list = Tecnologías
 master.menu.administrator.technology-record.create = Crear tecnología
 master.menu.administrator.tool-record.list = Herramientas
 master.menu.administrator.tool-record.create = Crear herramienta
+master.menu.administrator.banner.list = Banners
 
 # master.menu.provider ########################################################
 
