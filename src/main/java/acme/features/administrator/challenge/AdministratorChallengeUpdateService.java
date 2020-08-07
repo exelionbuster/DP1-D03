@@ -1,14 +1,3 @@
-/*
- * AdministratorUserAccountListService.java
- *
- * Copyright (c) 2019 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
 
 package acme.features.administrator.challenge;
 
@@ -22,18 +11,18 @@ import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorChallengeCreateService implements AbstractCreateService<Administrator, Challenge> {
+public class AdministratorChallengeUpdateService implements AbstractUpdateService<Administrator, Challenge> {
 
-	// Internal state ---------------------------------------------------------
+	// Internal state
 
 	@Autowired
 	AdministratorChallengeRepository repository;
 
 
-	// AbstractCreateService<Administrator, Challenge> interface --------------
+	// AbstractUpdateService<Administrator, Challenge> interface
 
 	@Override
 	public boolean authorise(final Request<Challenge> request) {
@@ -63,10 +52,12 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 	}
 
 	@Override
-	public Challenge instantiate(final Request<Challenge> request) {
-		Challenge result;
+	public Challenge findOne(final Request<Challenge> request) {
+		assert request != null;
 
-		result = new Challenge();
+		Challenge result;
+		int id = request.getModel().getInteger("id");
+		result = this.repository.findOne(id);
 
 		return result;
 	}
@@ -119,10 +110,13 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		if (validDeadline) {
 			errors.state(request, entity.getDeadline().after(now), "deadline", "administrator.challenge.form.error.past-deadline");
 		}
+
 	}
 
 	@Override
-	public void create(final Request<Challenge> request, final Challenge entity) {
+	public void update(final Request<Challenge> request, final Challenge entity) {
+		assert request != null;
+		assert entity != null;
 
 		this.repository.save(entity);
 	}
