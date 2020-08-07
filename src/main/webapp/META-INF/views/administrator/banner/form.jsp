@@ -1,6 +1,7 @@
 <%@page language="java"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
@@ -8,6 +9,15 @@
 	<acme:form-textbox code="administrator.banner.form.label.picture" path="picture"/>
 	<acme:form-textbox code="administrator.banner.form.label.slogan" path="slogan"/>
 	<acme:form-textbox code="administrator.banner.form.label.target" path="target"/>
+	<jstl:if test="${command == 'create'}">
+		<acme:form-select code="administrator.banner.form.label.credit-card" path="creditCardId">
+			<acme:form-option code="administrator.banner.form.credit-card.default" value=""/>
+			<c:forEach items="${creditCards}"  var="creditCard">
+				<acme:form-option code="${creditCard.number}" value="${creditCard.id}"/>
+			</c:forEach>
+		</acme:form-select>
+	</jstl:if>
+	
 	<jstl:if test="${creditId != null}">
 		<acme:form-return code="administrator.banner.form.button.credit-card" action="/administrator/credit-card/show?id=${creditId}"/>
 		<br>

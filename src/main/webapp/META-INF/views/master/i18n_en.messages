@@ -74,6 +74,7 @@ master.menu.administrator.technology-record.create = Create technology
 master.menu.administrator.tool-record.list = Tools
 master.menu.administrator.tool-record.create = Create tool
 master.menu.administrator.banner.list = Banners
+master.menu.administrator.banner.create = New banner
 
 # master.menu.provider ########################################################
 
