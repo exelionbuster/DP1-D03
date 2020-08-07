@@ -24,7 +24,7 @@ administrator.challenge.form.label.expert-reward		= Recompensa para el objetivo 
 
 administrator.challenge.form.error.deadline				= La fecha límite tiene que ser futura
 administrator.challenge.form.error.timestamp			= La fecha límite tiene que seguir el patrón DD/MM/AAAA HH:mm
-administrator.challenge.form.error.null-currency		= La cantidad y la divisa deben ser especificadas
+administrator.challenge.form.error.null-currency		= La cantidad y la divisa (€) deben ser especificadas
 administrator.challenge.form.error.gold-reward			= Esta cantidad debe ser mayor o igual que la recompensa para el objetivo Plata
 administrator.challenge.form.error.silver-reward		= Esta cantidad debe ser mayor o igual que la recompensa para el objetivo Bronce
 

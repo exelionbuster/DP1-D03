@@ -28,6 +28,9 @@ public class AdministratorChallengeController extends AbstractController<Adminis
 	@Autowired
 	private AdministratorChallengeUpdateService	updateService;
 
+	@Autowired
+	private AdministratorChallengeDeleteService	deleteService;
+
 
 	@PostConstruct
 	private void initialise() {
@@ -35,5 +38,6 @@ public class AdministratorChallengeController extends AbstractController<Adminis
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 }
