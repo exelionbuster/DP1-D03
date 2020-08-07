@@ -57,8 +57,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", 
-			"rookieGoal", "rookieReward", "averageGoal", "averageReward", "expertGoal", "expertReward");
+		request.unbind(entity, model, "title", "deadline", "description", "rookieGoal", "rookieReward", "averageGoal", "averageReward", "expertGoal", "expertReward");
 
 	}
 
@@ -82,24 +81,26 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		Boolean nullARRewards = false;
 		Date now = new Date(System.currentTimeMillis());
 
-		try {
-			entity.getExpertReward().getCurrency();
-		} catch (NullPointerException e) {
+		if (errors.hasErrors("expertReward")) {
+			nullEARewards = true;
 			errors.state(request, false, "expertReward", "administrator.challenge.form.error.null-currency");
-			nullEARewards = true;
+		} else {
+			errors.state(request, entity.getExpertReward().getCurrency().equals("€"), "expertReward", "administrator.challenge.form.error.null-currency");
 		}
-		try {
-			entity.getAverageReward().getCurrency();
-		} catch (NullPointerException e) {
+
+		if (errors.hasErrors("averageReward")) {
+			nullEARewards = true;
+			nullARRewards = true;
 			errors.state(request, false, "averageReward", "administrator.challenge.form.error.null-currency");
-			nullEARewards = true;
-			nullARRewards = true;
+		} else {
+			errors.state(request, entity.getAverageReward().getCurrency().equals("€"), "averageReward", "administrator.challenge.form.error.null-currency");
 		}
-		try {
-			entity.getRookieReward().getCurrency();
-		} catch (NullPointerException e) {
-			errors.state(request, false, "rookieReward", "administrator.challenge.form.error.null-currency");
+
+		if (errors.hasErrors("rookieReward")) {
 			nullARRewards = true;
+			errors.state(request, false, "rookieReward", "administrator.challenge.form.error.null-currency");
+		} else {
+			errors.state(request, entity.getRookieReward().getCurrency().equals("€"), "rookieReward", "administrator.challenge.form.error.null-currency");
 		}
 
 		if (!nullEARewards) {
@@ -109,9 +110,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 			errors.state(request, entity.getAverageReward().getAmount() >= entity.getRookieReward().getAmount(), "averageReward", "administrator.challenge.form.error.average-reward");
 		}
 
-		try {
-			assert entity.getDeadline() != null;
-		} catch (AssertionError e1) {
+		if (errors.hasErrors("deadline")) {
 			validDeadline = false;
 			errors.state(request, false, "deadline", "administrator.challenge.form.error.timestamp");
 		}
@@ -123,6 +122,8 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 
 	@Override
 	public void create(final Request<Challenge> request, final Challenge entity) {
+		assert request != null;
+		assert entity != null;
 
 		this.repository.save(entity);
 	}

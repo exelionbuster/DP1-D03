@@ -35,9 +35,15 @@
 	<acme:form-submit test="${command == 'show'}" 
 		code="administrator.challenge.form.button.update" 
 		action="/administrator/challenge/update"/>
+		<acme:form-submit test="${command == 'show'}" 
+		code="administrator.challenge.form.button.delete" 
+		action="/administrator/challenge/delete"/>
 	<acme:form-submit test="${command == 'update'}" 
 		code="administrator.challenge.form.button.update" 
 		action="/administrator/challenge/update"/>
+	<acme:form-submit test="${command == 'update'}" 
+		code="administrator.challenge.form.button.delete" 
+		action="/administrator/challenge/delete"/>
 	<acme:form-return code="authenticated.challenge.form.button.return"/>
 	
 </acme:form>
