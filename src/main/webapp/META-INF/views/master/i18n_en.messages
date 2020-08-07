@@ -60,6 +60,7 @@ master.menu.authenticated.technology-record.list 	= Technologies
 
 master.menu.administrator 					= Administrator
 master.menu.administrator.notice.list-all 	= All notices
+master.menu.administrator.notice.create 	= New notice
 master.menu.administrator.dashboard			= Dashboard
 master.menu.administrator.user-accounts 	= User accounts
 master.menu.administrator.configuration 	= Configuration
