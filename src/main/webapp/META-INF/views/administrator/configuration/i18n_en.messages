@@ -11,5 +11,6 @@
 administrator.configuration.form.label.spam-words 		= Spam words
 administrator.configuration.form.label.threshold 		= Spam treshhold (%)
 administrator.configuration.form.label.activity-sectors = Activity sectors
-	
+
+administrator.configuration.form.button.update			= Update
 administrator.configuration.form.button.return 			= Return
