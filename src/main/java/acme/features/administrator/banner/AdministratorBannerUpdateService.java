@@ -85,6 +85,9 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 
 	@Override
 	public void update(final Request<Banner> request, final Banner entity) {
+		assert request != null;
+		assert entity != null;
+
 		String creditCardId = (String) request.getModel().getAttribute("creditCardId");
 		if (creditCardId != "") {
 			Integer creditId = new Integer(creditCardId);

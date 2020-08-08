@@ -19,7 +19,7 @@ administrator.technology-record.form.label.inventor = Inventor:
 administrator.technology-record.form.label.description = Description:
 administrator.technology-record.form.label.website = Website:
 administrator.technology-record.form.label.email = E-mail:
-administrator.technology-record.form.label.openSource = Open Source
+administrator.technology-record.form.label.open-source = Open Source
 administrator.technology-record.form.label.stars = Stars:
 	
 

@@ -2,9 +2,9 @@
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <spring:message var="nostars" code="administrator.company-record.form.nostars"/>
-
 <acme:form>
 	
 	<acme:form-textbox code="administrator.technology-record.form.label.title" path="title" />
@@ -13,7 +13,7 @@
 	<acme:form-textbox code="administrator.technology-record.form.label.description" path="description" />
 	<acme:form-url code="administrator.technology-record.form.label.website" path="webSite" />
 	<acme:form-textbox code="administrator.technology-record.form.label.email" path="email"/>
-	<acme:form-checkbox code="administrator.technology-record.form.label.openSource" path="openSource" />
+	<acme:form-checkbox code="administrator.technology-record.form.label.open-source" path="openSource" />
 	<jstl:choose>
     	<jstl:when test="${stars == null}">
         	<acme:form-double code="administrator.technology-record.form.label.stars" path="stars" placeholder="${nostars}"/>
