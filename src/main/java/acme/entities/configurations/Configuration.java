@@ -30,8 +30,4 @@ public class Configuration extends DomainEntity {
 	@NotBlank
 	private String				activitySectors;
 
-	// Derived attributes -----------------------------------------------------
-
-	// Relationships ----------------------------------------------------------
-
 }
