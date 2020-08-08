@@ -1,5 +1,6 @@
 <%@page language="java"%>
 
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
@@ -13,7 +14,7 @@
 	<acme:form-textbox code="administrator.tool-record.form.label.description" path="description" />
 	<acme:form-url code="administrator.tool-record.form.label.website" path="webSite" />
 	<acme:form-textbox code="administrator.tool-record.form.label.email" path="email"/>
-	<acme:form-checkbox code="administrator.tool-record.form.label.openSource" path="openSource" />
+	<acme:form-checkbox code="administrator.tool-record.form.label.open-source" path="openSource" />
 	<jstl:choose>
     	<jstl:when test="${stars == null}">
         	<acme:form-double code="administrator.tool-record.form.label.stars" path="stars" placeholder="${nostars}"/>

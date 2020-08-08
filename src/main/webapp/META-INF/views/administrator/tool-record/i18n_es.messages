@@ -19,7 +19,7 @@ administrator.tool-record.form.label.inventor = Creador:
 administrator.tool-record.form.label.description = Descripción:
 administrator.tool-record.form.label.website = Página web:
 administrator.tool-record.form.label.email = Correo electrónico:
-administrator.tool-record.form.label.openSource = Código abierto
+administrator.tool-record.form.label.open-source = Código abierto
 administrator.tool-record.form.label.stars = Estrellas:
 	
 

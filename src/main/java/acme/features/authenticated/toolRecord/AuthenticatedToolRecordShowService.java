@@ -31,8 +31,8 @@ public class AuthenticatedToolRecordShowService implements AbstractShowService<A
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "title", "activitySector", "inventor", "description", "webSite", "email", "licence", "stars");
 
+		request.unbind(entity, model, "title", "activitySector", "inventor", "description", "webSite", "email", "licence", "stars");
 	}
 
 	@Override

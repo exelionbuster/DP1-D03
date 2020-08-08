@@ -87,30 +87,33 @@ public class AdministratorOvertureCreateService implements AbstractCreateService
 			calendar = new GregorianCalendar();
 			minimunDeadline = calendar.getTime();
 			Boolean isAfter = entity.getDeadline().after(minimunDeadline);
-			errors.state(request, isAfter, "deadline", "administrator.overture.deadline.before");
+			errors.state(request, isAfter, "deadline", "administrator.overture.form.error.past-deadline");
 		}
 
 		//minMoney debe ser inferior a maxMoney, además ambos no puede ser negativos
 
 		if (!errors.hasErrors("minMoney") && entity.getMinMoney() != null && entity.getMaxMoney() != null) {
 			Boolean balance = entity.getMaxMoney().getAmount() > entity.getMinMoney().getAmount();
-			errors.state(request, balance, "minMoney", "administrator.overture.max-money.less");
+			errors.state(request, balance, "minMoney", "administrator.overture.form.error.max-money.less");
 		}
 
 		if (!errors.hasErrors("minMoney")) {
 			Boolean isPositive = entity.getMinMoney().getAmount() > 0;
-			errors.state(request, isPositive, "minMoney", "administrator.overture.min-money.negative");
+			errors.state(request, isPositive, "minMoney", "administrator.overture.form.error.min-money.negative");
 		}
 
 		if (!errors.hasErrors("maxMoney")) {
 			Boolean isPositive = entity.getMaxMoney().getAmount() > 0;
-			errors.state(request, isPositive, "maxMoney", "administrator.overture.max-money.negative");
+			errors.state(request, isPositive, "maxMoney", "administrator.overture.form.error.max-money.negative");
 		}
 
 	}
 
 	@Override
 	public void create(final Request<Overture> request, final Overture entity) {
+		assert request != null;
+		assert entity != null;
+
 		Date creationDate;
 
 		creationDate = new Date(System.currentTimeMillis() - 1);
