@@ -66,6 +66,9 @@
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create" />
 			<acme:menu-suboption code="master.menu.administrator.banner.list" action="/administrator/banner/list" />
 			<acme:menu-suboption code="master.menu.administrator.banner.create" action="/administrator/banner/create" />
+			<acme:menu-suboption code="master.menu.administrator.credit-card.list" action="/administrator/credit-card/list" />
+			<acme:menu-suboption code="master.menu.administrator.credit-card.create" action="/administrator/credit-card/create" />
+			
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.technology-record.list" action="/administrator/technology-record/list" />
 			<acme:menu-suboption code="master.menu.administrator.technology-record.create" action="/administrator/technology-record/create" />

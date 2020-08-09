@@ -17,11 +17,27 @@ import acme.framework.entities.Administrator;
 public class AdministratorCreditCardController extends AbstractController<Administrator, CreditCard> {
 
 	@Autowired
-	private AdministratorCreditCardShowService showService;
+	private AdministratorCreditCardShowService		showService;
+
+	@Autowired
+	private AdministratorCreditCardListService		listService;
+
+	@Autowired
+	private AdministratorCreditCardUpdateService	updateService;
+
+	@Autowired
+	private AdministratorCreditCardDeleteService	deleteService;
+
+	@Autowired
+	private AdministratorCreditCardCreateService	createService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 }

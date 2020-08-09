@@ -21,5 +21,9 @@
 	<definition name="administrator/credit-card/form" extends="master">
 		<put-attribute name="body" type="template" value="../administrator/credit-card/form.jsp"/>
 	</definition>
+	
+		<definition name="administrator/credit-card/list" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/credit-card/list.jsp" />
+	</definition>
 
 </tiles-definitions>
