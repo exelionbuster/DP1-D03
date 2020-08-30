@@ -68,6 +68,10 @@ public class AdministratorInquiryCreateService implements AbstractCreateService<
 		Inquiry result;
 
 		result = new Inquiry();
+		Date creationDate;
+
+		creationDate = new Date(System.currentTimeMillis() - 1);
+		result.setCreationDate(creationDate);
 
 		return result;
 	}
