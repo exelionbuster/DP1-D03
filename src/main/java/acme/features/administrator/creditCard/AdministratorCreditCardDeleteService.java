@@ -1,9 +1,12 @@
 
 package acme.features.administrator.creditCard;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.banners.Banner;
 import acme.entities.creditCards.CreditCard;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -68,6 +71,13 @@ public class AdministratorCreditCardDeleteService implements AbstractDeleteServi
 	public void delete(final Request<CreditCard> request, final CreditCard entity) {
 		assert request != null;
 		assert entity != null;
+
+		Collection<Banner> bs;
+		bs = this.repository.findBannerByCreditCardId(entity.getId());
+		if (!bs.isEmpty()) {
+			bs.stream().forEach(b -> b.setCreditCard(null));
+			bs.stream().forEach(b -> this.repository.save(b));
+		}
 
 		this.repository.delete(entity);
 

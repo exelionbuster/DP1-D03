@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.banners.Banner;
 import acme.entities.creditCards.CreditCard;
 import acme.framework.repositories.AbstractRepository;
 
@@ -20,4 +21,7 @@ public interface AdministratorCreditCardRepository extends AbstractRepository {
 
 	@Query("select cc from CreditCard cc where cc.id <> ?1")
 	Collection<CreditCard> findManyButOne(int id);
+
+	@Query("select b from Banner b where b.creditCard.id = ?1")
+	Collection<Banner> findBannerByCreditCardId(int id);
 }
