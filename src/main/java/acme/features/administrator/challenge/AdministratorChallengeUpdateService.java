@@ -1,6 +1,8 @@
 
 package acme.features.administrator.challenge;
 
+import java.time.Instant;
+import java.time.ZonedDateTime;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -107,7 +109,10 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		}
 
 		if (validDeadline) {
-			errors.state(request, entity.getDeadline().after(now), "deadline", "administrator.challenge.form.error.past-deadline");
+			Instant aMonth = ZonedDateTime.now().plusMonths(1).toInstant();
+			Instant deadline = entity.getDeadline().toInstant();
+			boolean afterMonth = deadline.isAfter(aMonth);
+			errors.state(request, afterMonth, "deadline", "administrator.challenge.form.error.past-deadline");
 		}
 
 	}
